@@ -13,18 +13,18 @@
         <div class="vue-color__sketch__active-color" :style="{background: activeColor}"></div>
       </div>
     </div>
-    <div class="vue-color__sketch__field">
+    <div class="vue-color__cmyk__field">
       <!-- cmyk -->
-      <div class="vue-color__sketch__field--single">
+      <div class="vue-color__cmyk__field--single">
         <ed-in label="c" v-model="cmyk.c" @change="inputChange"></ed-in>
       </div>
-      <div class="vue-color__sketch__field--single">
+      <div class="vue-color__cmyk__field--single">
         <ed-in label="m" v-model="cmyk.m" @change="inputChange"></ed-in>
       </div>
-      <div class="vue-color__sketch__field--single">
+      <div class="vue-color__cmyk__field--single">
         <ed-in label="y" v-model="cmyk.y" @change="inputChange"></ed-in>
       </div>
-      <div class="vue-color__sketch__field--single">
+      <div class="vue-color__cmyk__field--single">
         <ed-in label="k" v-model="cmyk.k" @change="inputChange"></ed-in>
       </div>
     </div>
@@ -38,7 +38,7 @@ import saturation from './common/Saturation.vue'
 import hue from './common/Hue.vue'
 
 export default {
-  name: 'Sketch',
+  name: 'CMYK',
   mixins: [colorMixin],
   components: {
     saturation,
@@ -173,7 +173,7 @@ export default {
   border-radius 2px
   box-shadow inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25)
   z-index 2
-.vue-color__sketch__field
+.vue-color__cmyk__field
   display flex
   padding-top 4px
   .vue-color__editable-input__input
