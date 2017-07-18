@@ -1,16 +1,16 @@
 <template>
-  <div class="vue-color__sketch">
-    <div class="vue-color__sketch__saturation-wrap">
+  <div class="vue-color__CMYK">
+    <div class="vue-color__CMYK__saturation-wrap">
       <saturation v-model="colors" @change="childChange"></saturation>
     </div>
-    <div class="vue-color__sketch__controls">
-      <div class="vue-color__sketch__sliders">
-        <div class="vue-color__sketch__hue-wrap-cmyk">
+    <div class="vue-color__CMYK__controls">
+      <div class="vue-color__CMYK__sliders">
+        <div class="vue-color__CMYK__hue-wrap-cmyk">
           <hue v-model="colors" @change="childChange"></hue>  
         </div>
       </div>
-      <div class="vue-color__sketch__color-wrap">
-        <div class="vue-color__sketch__active-color" :style="{background: activeColor}"></div>
+      <div class="vue-color__CMYK__color-wrap">
+        <div class="vue-color__CMYK__active-color" :style="{background: activeColor}"></div>
       </div>
     </div>
     <div class="vue-color__CMYK__field">
@@ -126,7 +126,7 @@ export default {
 </script>
 
 <style lang="stylus">
-.vue-color__sketch
+.vue-color__CMYK
   position relative
   width 200px
   padding 10px 10px 0
@@ -134,37 +134,37 @@ export default {
   background #fff
   border-radius 4px
   box-shadow 0 0 0 1px rgba(0,0,0,.15), 0 8px 16px rgba(0,0,0,.15)
-.vue-color__sketch__saturation-wrap
+.vue-color__CMYK__saturation-wrap
   width 100%
   padding-bottom 75%
   position relative
   overflow hidden
-.vue-color__sketch__controls
+.vue-color__CMYK__controls
   display flex
-.vue-color__sketch__sliders
+.vue-color__CMYK__sliders
   padding 4px 0
   flex 1
   .vue-color__c-hue
   .vue-color__c-alpha__gradient
     border-radius 2px
-.vue-color__sketch__hue-wrap-cmyk
+.vue-color__CMYK__hue-wrap-cmyk
   position relative
   height 24px
-.vue-color__sketch__hue-wrap-cmyk .vue-color__c-hue__picker
+.vue-color__CMYK__hue-wrap-cmyk .vue-color__c-hue__picker
   height 22px
-.vue-color__sketch__alpha-wrap
+.vue-color__CMYK__alpha-wrap
   position relative
   height 10px
   margin-top 4px
   overflow hidden
-.vue-color__sketch__color-wrap
+.vue-color__CMYK__color-wrap
   width 24px
   height 24px
   position relative
   margin-top 4px
   margin-left 4px
   border-radius 3px
-.vue-color__sketch__active-color
+.vue-color__CMYK__active-color
   position absolute
   top 0
   left 0
@@ -195,13 +195,13 @@ export default {
   padding-left 6px
 .vue-color__CMYK__field--double
   flex 2
-.vue-color__sketch__presets
+.vue-color__CMYK__presets
   margin-right -10px
   margin-left -10px
   padding-left 10px
   padding-top 10px
   border-top 1px solid #eee
-.vue-color__sketch__presets-color
+.vue-color__CMYK__presets-color
   border-radius 3px
   overflow hidden
   position relative
