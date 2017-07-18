@@ -49,6 +49,12 @@
         </div>
       </div>
 
+      <div class="demo-list">
+        <div class="demo-item">
+          <cmyk-picker v-model="colors"></cmyk-picker>
+          <h6>CMYK</h6>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -56,6 +62,7 @@
 
 <script>
 import material from '../src/components/Material.vue'
+import cmyk from '../src/components/CMYK.vue'
 import compact from '../src/components/Compact.vue'
 import swatches from '../src/components/Swatches.vue'
 import slider from '../src/components/Slider.vue'
@@ -89,6 +96,7 @@ let defaultProps = {
 export default {
   components: {
     'material-picker': material,
+    'cmyk-picker': cmyk,
     'compact-picker': compact,
     'swatches-picker': swatches,
     'slider-picker': slider,

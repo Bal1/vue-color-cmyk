@@ -1,3 +1,4 @@
+import CMYK from './components/CMYK.vue'
 import Compact from './components/Compact.vue'
 import Material from './components/Material.vue'
 import Slider from './components/Slider.vue'
@@ -14,6 +15,7 @@ import ColorMixin from './mixin/color.js'
 
 const VueColor = {
   version: '2.2.1',
+  CMYK,
   Compact,
   Material,
   Slider,
