@@ -190,10 +190,10 @@ export default {
     padding-top 3px
     padding-bottom 4px
     text-transform capitalize
-.vue-color__sketch__field--single
+.vue-color__cmyk__field--single
   flex 1
   padding-left 6px
-.vue-color__sketch__field--double
+.vue-color__cmyk__field--double
   flex 2
 .vue-color__sketch__presets
   margin-right -10px
