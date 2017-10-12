@@ -16,13 +16,13 @@
     <div class="vue-color__RGB__field">
       <!-- cmyk -->
       <div class="vue-color__RGB__field--single">
-        <ed-in label="r" v-model="rgba.r" @change="inputChange"></ed-in>
+        <ed-in label="r" v-model="colors.rgba.r" @change="inputChange"></ed-in>
       </div>
       <div class="vue-color__RGB__field--single">
-        <ed-in label="g" v-model="rgba.g" @change="inputChange"></ed-in>
+        <ed-in label="g" v-model="colors.rgba.g" @change="inputChange"></ed-in>
       </div>
       <div class="vue-color__RGB__field--single">
-        <ed-in label="b" v-model="rgba.b" @change="inputChange"></ed-in>
+        <ed-in label="b" v-model="colors.rgba.b" @change="inputChange"></ed-in>
       </div>
     </div>
   </div>
@@ -65,19 +65,20 @@ export default {
       if (!data) {
         return
       }
-      for (var k in data) {
-        var v = parseFloat(data[k])
-        if (v > 255) v = 255
-        else if (v < 0) v = 0
-        data[k] = v
+      if (data.hex) {
+        this.isValidHex(data.hex) && this.colorChange({
+          hex: data.hex,
+          source: 'hex'
+        })
+      } else if (data.r || data.g || data.b || data.a) {
+        this.colorChange({
+          r: data.r || this.colors.rgba.r,
+          g: data.g || this.colors.rgba.g,
+          b: data.b || this.colors.rgba.b,
+          a: data.a || this.colors.rgba.a,
+          source: 'rgba'
+        })
       }
-      this.colorChange({
-        r: data.r || this.colors.rgba.r,
-        g: data.g || this.colors.rgba.g,
-        b: data.b || this.colors.rgba.b,
-        a: 1,
-        source: 'rgba'
-      })
     }
   }
 }
