@@ -69,9 +69,15 @@ export default {
         var v = parseFloat(data[k])
         if (v > 255) v = 255
         else if (v < 0) v = 0
-        this.rgba[k] = v
+        data[k] = v
       }
-      this.colorChange(this.rgba)
+      this.colorChange({
+        r: data.r || this.colors.rgba.r,
+        g: data.g || this.colors.rgba.g,
+        b: data.b || this.colors.rgba.b,
+        a: 1,
+        source: 'rgba'
+      })
     }
   }
 }
