@@ -1,3 +1,4 @@
+import RGB from './components/RGB.vue'
 import CMYK from './components/CMYK.vue'
 import Compact from './components/Compact.vue'
 import Material from './components/Material.vue'
@@ -15,6 +16,7 @@ import ColorMixin from './mixin/color.js'
 
 const VueColor = {
   version: '2.2.1',
+  RGB,
   CMYK,
   Compact,
   Material,

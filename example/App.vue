@@ -56,12 +56,20 @@
         </div>
       </div>
 
+      <div class="demo-list">
+        <div class="demo-item">
+          <rgb-picker v-model="colors"></rgb-picker>
+          <h6>RGB</h6>
+        </div>
+      </div>
+
     </div>
   </div>
 </template>
 
 <script>
 import material from '../src/components/Material.vue'
+import rgb from '../src/components/RGB.vue'
 import cmyk from '../src/components/CMYK.vue'
 import compact from '../src/components/Compact.vue'
 import swatches from '../src/components/Swatches.vue'
@@ -97,6 +105,7 @@ export default {
   components: {
     'material-picker': material,
     'cmyk-picker': cmyk,
+    'rgb-picker': rgb,
     'compact-picker': compact,
     'swatches-picker': swatches,
     'slider-picker': slider,
