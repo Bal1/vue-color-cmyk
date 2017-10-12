@@ -16,13 +16,13 @@
     <div class="vue-color__RGB__field">
       <!-- cmyk -->
       <div class="vue-color__RGB__field--single">
-        <ed-in label="r" v-model="colors.rgba.r" @change="inputChange"></ed-in>
+        <ed-in label="r" v-model="rgba.r" @change="inputChange"></ed-in>
       </div>
       <div class="vue-color__RGB__field--single">
-        <ed-in label="g" v-model="colors.rgba.g" @change="inputChange"></ed-in>
+        <ed-in label="g" v-model="rgba.g" @change="inputChange"></ed-in>
       </div>
       <div class="vue-color__RGB__field--single">
-        <ed-in label="b" v-model="colors.rgba.b" @change="inputChange"></ed-in>
+        <ed-in label="b" v-model="rgba.b" @change="inputChange"></ed-in>
       </div>
     </div>
   </div>
@@ -67,7 +67,7 @@ export default {
       }
       for (var k in data) {
         var v = parseFloat(data[k])
-        if (v > 100) v = 100
+        if (v > 255) v = 255
         else if (v < 0) v = 0
         this.rgba[k] = v
       }
