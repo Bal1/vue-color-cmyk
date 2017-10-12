@@ -42,16 +42,6 @@ export default {
     hue,
     'ed-in': editableInput
   },
-  data () {
-    return {
-      cm: {
-        c: 0,
-        m: 0,
-        y: 0,
-        k: 0
-      }
-    }
-  },
   computed: {
     rgba () {
       return this.colors.rgba
